@@ -1,9 +1,2 @@
-﻿using SpanishAppGame.ScrambleWordsGame;
-
-class Program
-{
-    static void Main(string[] args)
-    {
-        ScrambleWords.StartGame();
-    }
-}
+// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");

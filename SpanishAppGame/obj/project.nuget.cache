@@ -1,8 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "zJiPkmeRLJHlqQlaG6JCN06LglljNLnVY2FHtMYazDez4L4XUOuyriIF3/86ZCnl8xFq9n3uJr7Nrd4O4ZqbBg==",
+  "dgSpecHash": "5uviIvF042AkQbZO0O9G9Fud2+1HJu87s7NZUyM1dyJnxCTf3soyV7hWVWgqbWtI3shcWb8friSuCWYm9XoZUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Joshua\\OneDrive\\Escritorio\\BYU-I\\Winter 2025\\CSE 310 Applied Programming\\SpanishApp\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Joshua\\OneDrive\\Escritorio\\BYU-I\\Winter 2025\\CSE 310 Applied Programming\\SpanishApp\\SpanishApp\\SpanishAppGame\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
