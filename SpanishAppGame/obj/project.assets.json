@@ -95,7 +95,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\Joshua\\OneDrive\\Escritorio\\BYU-I\\Winter 2025\\CSE 310 Applied Programming\\SpanishApp\\SpanishApp\\SpanishAppGame\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+      "message": "Problem reading the cache file C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
 }
