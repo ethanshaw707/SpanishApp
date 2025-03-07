@@ -13,3 +13,18 @@ c:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programmin
 c:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.pdb
 c:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.genruntimeconfig.cache
 c:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0\ref\SpanishAppGame.dll
+C:\Users\Jonat\SpanishApp\SpanishAppGame\bin\Debug\net8.0\SpanishAppGame.exe
+C:\Users\Jonat\SpanishApp\SpanishAppGame\bin\Debug\net8.0\SpanishAppGame.deps.json
+C:\Users\Jonat\SpanishApp\SpanishAppGame\bin\Debug\net8.0\SpanishAppGame.runtimeconfig.json
+C:\Users\Jonat\SpanishApp\SpanishAppGame\bin\Debug\net8.0\SpanishAppGame.dll
+C:\Users\Jonat\SpanishApp\SpanishAppGame\bin\Debug\net8.0\SpanishAppGame.pdb
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.AssemblyInfoInputs.cache
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.AssemblyInfo.cs
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.csproj.CoreCompileInputs.cache
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.sourcelink.json
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.dll
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\refint\SpanishAppGame.dll
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.pdb
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\SpanishAppGame.genruntimeconfig.cache
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0\ref\SpanishAppGame.dll
