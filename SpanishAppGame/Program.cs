@@ -7,23 +7,8 @@ class Program
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
+
+        // Show the HelloWorldForm first
         Application.Run(new HelloWorldForm());
-    }
-}
-
-public class HelloWorldForm : Form
-{
-    public HelloWorldForm()
-    {
-        Text = "Hello, World!";
-        Width = 1600;
-        Height = 1200;
-
-        Label label = new Label();
-        label.Text = "Hello, World!";
-        label.Dock = DockStyle.Fill;
-        label.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
-        Controls.Add(label);
     }
 }
