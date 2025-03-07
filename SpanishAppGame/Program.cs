@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 class Program
@@ -9,6 +9,6 @@ class Program
         Application.SetCompatibleTextRenderingDefault(false);
 
         // Show the HelloWorldForm first
-        Application.Run(new HelloWorldForm());
+        Application.Run(new SpanishGamesForm());
     }
 }
