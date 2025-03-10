@@ -3,12 +3,13 @@ using System.Windows.Forms;
 
 class Program
 {
+    [STAThread] // Required for Windows Forms applications
     static void Main()
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
-        // Show the HelloWorldForm first
-        Application.Run(new HelloWorldForm());
+        // Start the Typing Game Form
+        Application.Run(new TypingGameForm()); // Updated from HelloWorldForm to TypingGameForm
     }
 }
