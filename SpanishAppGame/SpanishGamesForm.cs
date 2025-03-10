@@ -1,7 +1,8 @@
 using System;
 using System.Windows.Forms;
 using SpanishAppGame;
-
+namespace SpanishAppGame
+{
 public class SpanishGamesForm : Form
 {
     private Button crosswordButton;
@@ -89,4 +90,5 @@ public class SpanishGamesForm : Form
         Application.EnableVisualStyles();
         Application.Run(new SpanishGamesForm());
     }
+}
 }
