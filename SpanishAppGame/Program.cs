@@ -1,14 +1,16 @@
 ﻿using System;
 using System.Windows.Forms;
+using SpanishAppGame;
 
 class Program
 {
+    [STAThread] // Required for Windows Forms applications
     static void Main()
     {
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
-        // Show the HelloWorldForm first
+        // Show the SpanishGamesForm first
         Application.Run(new SpanishGamesForm());
     }
 }

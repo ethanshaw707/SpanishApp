@@ -1,5 +1,6 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "i551nq7LazwiatiLZAiznawkvBk2uruXW8sfRgMbvv3/0jocHpFs67E3yeK77IQxkyweG2VhJoKx0AP3YuNnNg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Joshua\\OneDrive\\Escritorio\\BYU-I\\Winter 2025\\CSE 310 Applied Programming\\SpanishApp\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
@@ -54,6 +55,16 @@
     "C:\\Users\\Joshua\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Joshua\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\Joshua\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
+=======
+  "dgSpecHash": "5aRf7Qjl72c=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Jonat\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.13\\microsoft.netcore.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\Jonat\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.13\\microsoft.windowsdesktop.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\Jonat\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.13\\microsoft.aspnetcore.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\Jonat\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.13\\microsoft.netcore.app.host.win-x64.8.0.13.nupkg.sha512"
+>>>>>>> 5d8953a7ddaa285945667d25421ebc3ef86f9478
   ],
   "logs": []
 }
