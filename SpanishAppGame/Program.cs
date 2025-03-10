@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 class Program
@@ -9,7 +9,7 @@ class Program
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
-        // Start the Typing Game Form
-        Application.Run(new TypingGameForm()); // Updated from HelloWorldForm to TypingGameForm
+        // Show the HelloWorldForm first
+        Application.Run(new SpanishGamesForm());
     }
 }
