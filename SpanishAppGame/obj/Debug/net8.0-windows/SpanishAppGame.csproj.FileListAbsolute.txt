@@ -43,3 +43,6 @@ C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programmin
 C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishAppGame.pdb
 C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishAppGame.genruntimeconfig.cache
 C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\ref\SpanishAppGame.dll
+C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishAppGame.csproj.AssemblyReference.cache
+C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishA.91247401.Up2Date
