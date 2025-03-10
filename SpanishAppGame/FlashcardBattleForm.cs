@@ -18,7 +18,17 @@ public partial class FlashcardBattleForm : Form
         {"sun", "sol"},
         {"food", "comida"},
         {"friend", "amigo"},
-        {"tree", "árbol"}
+        {"tree", "árbol"},
+        {"computer", "computadora"},
+        {"school", "escuela"},
+        {"family", "familia"},
+        {"music", "música"},
+        {"movie", "película"},
+        {"beach", "playa"},
+        {"city", "ciudad"},
+        {"work", "trabajo"},
+        {"money", "dinero"},
+        {"time", "tiempo"}
     };
 
     private static int player1Score = 0;
@@ -37,6 +47,7 @@ public partial class FlashcardBattleForm : Form
     private Label roundLabel;
     private Label wordLabel; // To display the word to translate
     private Label countdownLabel; // For countdown timer
+    private Label playerLabel; // To display the current player
     private Stopwatch roundTimer;
 
     public FlashcardBattleForm()
@@ -55,6 +66,7 @@ public partial class FlashcardBattleForm : Form
         this.roundLabel = new Label();
         this.wordLabel = new Label(); // Word display label
         this.countdownLabel = new Label(); // Countdown label
+        this.playerLabel = new Label(); // Player label
 
         // Set up the labels and controls
         this.player1ScoreLabel.Text = "Player 1: 0";
@@ -74,10 +86,14 @@ public partial class FlashcardBattleForm : Form
         this.wordLabel.Font = new System.Drawing.Font("Arial", 16, System.Drawing.FontStyle.Bold);
         this.Controls.Add(wordLabel);
 
-        this.countdownLabel.Text = "Countdown: 3";
+        this.countdownLabel.Text = "3";
         this.countdownLabel.Location = new System.Drawing.Point(150, 140);
         this.countdownLabel.Font = new System.Drawing.Font("Arial", 16, System.Drawing.FontStyle.Bold);
         this.Controls.Add(countdownLabel);
+
+        this.playerLabel.Text = "Player 1's Turn";
+        this.playerLabel.Location = new System.Drawing.Point(150, 170); // Position it below the countdown
+        this.Controls.Add(playerLabel);
 
         this.answerTextBox.Location = new System.Drawing.Point(20, 180);
         this.Controls.Add(answerTextBox);
@@ -114,12 +130,14 @@ public partial class FlashcardBattleForm : Form
         winnerLabel.Text = "";
         roundLabel.Text = "Round: 1";
 
-        answerTextBox.Enabled = true;
-        submitButton.Enabled = true;
+        answerTextBox.Enabled = false;
+        submitButton.Enabled = false;
 
         startButton.Enabled = false; // Disable start button after game starts
 
-        PlayRound(currentPlayer); // Start first round for Player 1
+        //PlayRound(currentPlayer);
+        playerLabel.Text = "Player 1's Turn";
+        StartCountdown(currentPlayer);  // Start first round for Player 1
     }
 
     // Handle answer submission when clicking submit button
@@ -158,6 +176,7 @@ public partial class FlashcardBattleForm : Form
         if (currentPlayer == 1)
         {
             currentPlayer = 2;
+            playerLabel.Text = "Player 2's Turn";
             StartCountdown(2); // Start countdown for Player 2
         }
         else
@@ -167,6 +186,7 @@ public partial class FlashcardBattleForm : Form
                 currentRound++;
                 roundLabel.Text = $"Round: {currentRound}";
                 currentPlayer = 1;
+                playerLabel.Text = "Player 1's Turn";
                 StartCountdown(1); // Start countdown for Player 1 again
             }
             else
@@ -220,14 +240,14 @@ public partial class FlashcardBattleForm : Form
     private void StartCountdown(int playerNumber)
 {
     int countdownValue = 3; // Start countdown at 3 seconds
-    countdownLabel.Text = $"Countdown: {countdownValue}";
+    countdownLabel.Text = $"{countdownValue}";
 
     System.Windows.Forms.Timer countdownTimer = new System.Windows.Forms.Timer(); // Explicitly specify the correct Timer class
     countdownTimer.Interval = 1000; // 1 second interval
     countdownTimer.Tick += (sender, e) =>
     {
         countdownValue--;
-        countdownLabel.Text = $"Countdown: {countdownValue}";
+        countdownLabel.Text = $"{countdownValue}";
         if (countdownValue == 0)
         {
             countdownTimer.Stop();

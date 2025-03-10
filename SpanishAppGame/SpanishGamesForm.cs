@@ -48,9 +48,9 @@ public class SpanishGamesForm : Form
         exitButton.Click += OnExitClick;
 
         Controls.Add(exitButton);
+        Controls.Add(flashcardBattleButton);
         Controls.Add(scrambleGameButton);
-        Controls.Add(typingGameButton);
-        Controls.Add(flashcardBattleButton);  // Add the Flashcard Battle button to the form
+        Controls.Add(typingGameButton);  
         Controls.Add(crosswordButton);
         Controls.Add(titleLabel);
     }
