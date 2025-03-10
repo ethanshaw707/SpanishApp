@@ -68,7 +68,9 @@ public class SpanishGamesForm : Form
 
     private void OnScrambleGameClick(object sender, EventArgs e)
     {
-        MessageBox.Show("Scramble Game (To be implemented)");
+        ScrambleWordForm scrambleGame = new ScrambleWordForm();
+        scrambleGame.Show();
+        
     }
     private void OnFlashcardBattleClick(object sender, EventArgs e)  // New event for Flashcard Battle
     {
