@@ -7,6 +7,7 @@ public class SpanishGamesForm : Form
     private Button crosswordButton;
     private Button typingGameButton;
     private Button scrambleGameButton;
+    private Button flashcardBattleButton;
     private Button exitButton;
     private Label titleLabel;
 
@@ -36,14 +37,20 @@ public class SpanishGamesForm : Form
         scrambleGameButton.Dock = DockStyle.Top;
         scrambleGameButton.Click += OnScrambleGameClick;
 
+        flashcardBattleButton = new Button();  // Button for Flashcard Battle
+        flashcardBattleButton.Text = "4. Flashcard Battle";
+        flashcardBattleButton.Dock = DockStyle.Top;
+        flashcardBattleButton.Click += OnFlashcardBattleClick;
+
         exitButton = new Button();
-        exitButton.Text = "4. Exit";
+        exitButton.Text = "5. Exit";
         exitButton.Dock = DockStyle.Top;
         exitButton.Click += OnExitClick;
 
         Controls.Add(exitButton);
         Controls.Add(scrambleGameButton);
         Controls.Add(typingGameButton);
+        Controls.Add(flashcardBattleButton);  // Add the Flashcard Battle button to the form
         Controls.Add(crosswordButton);
         Controls.Add(titleLabel);
     }
@@ -62,6 +69,11 @@ public class SpanishGamesForm : Form
     private void OnScrambleGameClick(object sender, EventArgs e)
     {
         MessageBox.Show("Scramble Game (To be implemented)");
+    }
+    private void OnFlashcardBattleClick(object sender, EventArgs e)  // New event for Flashcard Battle
+    {
+        FlashcardBattleForm flashcardBattleForm = new FlashcardBattleForm();
+        flashcardBattleForm.Show(); // Open the Flashcard Battle form
     }
 
     private void OnExitClick(object sender, EventArgs e)
