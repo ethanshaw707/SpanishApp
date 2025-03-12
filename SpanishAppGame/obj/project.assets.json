@@ -2923,19 +2923,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jonat\\.nuget\\packages\\": {}
+    "C:\\Users\\Joshua\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
+      "projectUniqueName": "C:\\Users\\Joshua\\OneDrive\\Escritorio\\BYU-I\\Winter 2025\\CSE 310 Applied Programming\\SpanishApp\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
       "projectName": "SpanishAppGame",
-      "projectPath": "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
-      "packagesPath": "C:\\Users\\Jonat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\obj\\",
+      "projectPath": "C:\\Users\\Joshua\\OneDrive\\Escritorio\\BYU-I\\Winter 2025\\CSE 310 Applied Programming\\SpanishApp\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
+      "packagesPath": "C:\\Users\\Joshua\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Joshua\\OneDrive\\Escritorio\\BYU-I\\Winter 2025\\CSE 310 Applied Programming\\SpanishApp\\SpanishApp\\SpanishAppGame\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\Jonat\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Joshua\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config"
       ],
       "originalTargetFrameworks": [
         "net8.0-windows"
@@ -2958,8 +2963,7 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -2985,24 +2989,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.13, 8.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[8.0.13, 8.0.13]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.13, 8.0.13]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[8.0.13, 8.0.13]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -3011,8 +2997,16 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.206/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Joshua\\OneDrive\\Escritorio\\BYU-I\\Winter 2025\\CSE 310 Applied Programming\\SpanishApp\\SpanishApp\\SpanishAppGame\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
