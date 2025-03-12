@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using SpanishAppGame;
 
 class Program
 {
@@ -9,7 +10,7 @@ class Program
         Application.EnableVisualStyles();
         Application.SetCompatibleTextRenderingDefault(false);
 
-        // Show the HelloWorldForm first
+        // Show the SpanishGamesForm first
         Application.Run(new SpanishGamesForm());
     }
 }

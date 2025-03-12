@@ -1,12 +1,14 @@
 using System;
 using System.Windows.Forms;
 using SpanishAppGame;
-
+namespace SpanishAppGame
+{
 public class SpanishGamesForm : Form
 {
     private Button crosswordButton;
     private Button typingGameButton;
     private Button scrambleGameButton;
+    private Button flashcardBattleButton;
     private Button exitButton;
     private Label titleLabel;
 
@@ -14,7 +16,7 @@ public class SpanishGamesForm : Form
     {
         Text = "Spanish Games";
         Width = 400;
-        Height = 300;
+        Height = 500;
 
         titleLabel = new Label();
         titleLabel.Text = "Welcome to the Spanish Games";
@@ -36,14 +38,20 @@ public class SpanishGamesForm : Form
         scrambleGameButton.Dock = DockStyle.Top;
         scrambleGameButton.Click += OnScrambleGameClick;
 
+        flashcardBattleButton = new Button();  // Button for Flashcard Battle
+        flashcardBattleButton.Text = "4. Flashcard Battle";
+        flashcardBattleButton.Dock = DockStyle.Top;
+        flashcardBattleButton.Click += OnFlashcardBattleClick;
+
         exitButton = new Button();
-        exitButton.Text = "4. Exit";
+        exitButton.Text = "5. Exit";
         exitButton.Dock = DockStyle.Top;
         exitButton.Click += OnExitClick;
 
         Controls.Add(exitButton);
+        Controls.Add(flashcardBattleButton);
         Controls.Add(scrambleGameButton);
-        Controls.Add(typingGameButton);
+        Controls.Add(typingGameButton);  
         Controls.Add(crosswordButton);
         Controls.Add(titleLabel);
     }
@@ -67,6 +75,11 @@ public class SpanishGamesForm : Form
         scrambleGame.Show();
         
     }
+    private void OnFlashcardBattleClick(object sender, EventArgs e)  // New event for Flashcard Battle
+    {
+        FlashcardBattleForm flashcardBattleForm = new FlashcardBattleForm();
+        flashcardBattleForm.Show(); // Open the Flashcard Battle form
+    }
 
     private void OnExitClick(object sender, EventArgs e)
     {
@@ -79,4 +92,5 @@ public class SpanishGamesForm : Form
         Application.EnableVisualStyles();
         Application.Run(new SpanishGamesForm());
     }
+}
 }

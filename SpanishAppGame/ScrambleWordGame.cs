@@ -14,37 +14,62 @@ namespace SpanishAppGame
         private Button newWordButton;
         private string currentWord = string.Empty;
         private string scrambledWord = string.Empty;
-        private string[] words = { "gato", "perro", "libro", "casa", "amigo" };
-
+        private string[] words = { "gato", "perro", "libro", "casa", "amigo", "ciudad", "rio", "bosque", "playa",
+    "escuela", "profesor", "estudiante", "computadora", "teclado", "raton", "pantalla"
+};
         public ScrambleWordForm()
         {
-            Text = "Scramble Word Game";
+            BackColor = Color.WhiteSmoke;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+
+            Text = "🧩 Scramble Word Game";
             Width = 400;
             Height = 300;
             StartPosition = FormStartPosition.CenterScreen;
 
             scrambledLabel = new Label
-            {
-                Text = "Scrambled word will appear here",
-                Dock = DockStyle.Top,
-                Font = new Font("Arial", 14),
-                TextAlign = ContentAlignment.MiddleCenter,
-                Height = 50
-            };
+{
+    Text = "Scrambled word will appear here",
+    Dock = DockStyle.Top,
+    Font = new Font("Arial", 16, FontStyle.Bold),
+    ForeColor = Color.DarkBlue,
+    TextAlign = ContentAlignment.MiddleCenter,
+    Height = 60,
+    Padding = new Padding(10)
+};
 
-            inputBox = new TextBox
-            {
-                Dock = DockStyle.Top,
-                Font = new Font("Arial", 14),
-                TextAlign = HorizontalAlignment.Center
-            };
+inputBox = new TextBox
+{
+    Dock = DockStyle.Top,
+    Font = new Font("Arial", 14),
+    TextAlign = HorizontalAlignment.Center,
+    BackColor = Color.LightYellow,
+    ForeColor = Color.DarkSlateGray,
+    BorderStyle = BorderStyle.FixedSingle,
+    Margin = new Padding(10)
+};
 
-            submitButton = new Button
-            {
-                Text = "Submit",
-                Dock = DockStyle.Top,
-                Height = 40
-            };
+submitButton = new Button
+{
+    Text = "Submit",
+    Dock = DockStyle.Top,
+    Height = 40,
+    BackColor = Color.LightGreen,
+    FlatStyle = FlatStyle.Flat,
+    Font = new Font("Arial", 12, FontStyle.Bold)
+};
+
+newWordButton = new Button
+{
+    Text = "New Word",
+    Dock = DockStyle.Top,
+    Height = 40,
+    BackColor = Color.CornflowerBlue,
+    FlatStyle = FlatStyle.Flat,
+    Font = new Font("Arial", 12, FontStyle.Bold),
+    ForeColor = Color.White
+};
+
             submitButton.Click += OnSubmit;
 
             newWordButton = new Button
@@ -75,11 +100,11 @@ namespace SpanishAppGame
         {
             if (inputBox.Text.ToLower() == currentWord)
             {
-                MessageBox.Show("¡Correcto! 😎", "Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("¡Correcto! 😎", "🎉 Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Incorrecto. La palabra correcta era: " + currentWord, "Result", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Incorrecto. La palabra correcta era: " + currentWord, "❌ Result", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
