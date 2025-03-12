@@ -1,5 +1,17 @@
 {
   "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "hyEe+1uY1qk=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ethan\\Downloads\\AppliedProgrammingSprint1\\SpanishApp\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ethan\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.13\\microsoft.netcore.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\ethan\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.13\\microsoft.windowsdesktop.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\ethan\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.13\\microsoft.aspnetcore.app.ref.8.0.13.nupkg.sha512",
+    "C:\\Users\\ethan\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.13\\microsoft.netcore.app.host.win-x64.8.0.13.nupkg.sha512"
+  ],
+  "logs": []
+=======
   "dgSpecHash": "2Jqp9YyatdE=",
   "success": true,
   "projectFilePath": "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
@@ -67,4 +79,5 @@
       "message": "Problem reading the cache file C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
     }
   ]
+>>>>>>> d44a52cce5f47f7763ea50a5edd2e681fca6ab54
 }
