@@ -16,7 +16,7 @@ public class SpanishGamesForm : Form
     {
         Text = "Spanish Games";
         Width = 400;
-        Height = 300;
+        Height = 500;
 
         titleLabel = new Label();
         titleLabel.Text = "Welcome to the Spanish Games";

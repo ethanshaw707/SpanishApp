@@ -27,16 +27,27 @@ public class CrosswordForm : Form{
             crosswordGrid = new Dictionary<(int, int), (char, TextBox)>();
             words = new Dictionary<string, (List<(int, int)>, string)>
             {
-                { "perro", (new List<(int, int)>(), "1. Animal that barks (English: Dog)") },
-                { "gato", (new List<(int, int)>(), "2. A feline pet (English: Cat)") },
-                { "casa", (new List<(int, int)>(), "3. A place where people live (English: House)") },
-                { "sol", (new List<(int, int)>(), "4. The star that gives us light (English: Sun)") },
-                { "luz", (new List<(int, int)>(), "5. What helps us see in darkness (English: Light)") },
-                { "vino", (new List<(int, int)>(), "6. A drink made from grapes (English: Wine)") },
-                { "pan", (new List<(int, int)>(), "7. A common breakfast food (English: Bread)") },
-                { "agua", (new List<(int, int)>(), "8. Essential for life (English: Water)") },
-                { "mesa", (new List<(int, int)>(), "9. You eat meals on this (English: Table)") },
-                { "silla", (new List<(int, int)>(), "10. You sit on this (English: Chair)") }
+                { "perro", (new List<(int, int)>(), "Animal that barks (English: Dog)") },
+                { "gato", (new List<(int, int)>(), "A feline pet (English: Cat)") },
+                { "casa", (new List<(int, int)>(), "A place where people live (English: House)") },
+                { "sol", (new List<(int, int)>(), "The star that gives us light (English: Sun)") },
+                { "luz", (new List<(int, int)>(), "What helps us see in darkness (English: Light)") },
+                { "vino", (new List<(int, int)>(), "A drink made from grapes (English: Wine)") },
+                { "pan", (new List<(int, int)>(), "A common breakfast food (English: Bread)") },
+                { "agua", (new List<(int, int)>(), "Essential for life (English: Water)") },
+                { "mesa", (new List<(int, int)>(), "You eat meals on this (English: Table)") },
+                { "silla", (new List<(int, int)>(), "You sit on this (English: Chair)") }
+                // {"libro", (new List<(int, int)>(), "Contains stories and information (English: Book)")},
+                // {"lapiz", (new List<(int, int)>(), "Used for writing (English: Pencil)")},
+                // {"escuela", (new List<(int, int)>(), "Place of learning (English: School)")},
+                // {"computadora", (new List<(int, int)>(), "Electronic device for work and play (English: Computer)")},
+                // {"telefono", (new List<(int, int)>(), "Communication device (English: Telephone)")},
+                // {"amigo", (new List<(int, int)>(), "A close friend (English: Friend)")},
+                // {"familia", (new List<(int, int)>(), "Your closest relatives (English: Family)")},
+                // {"comida", (new List<(int, int)>(), "What you eat (English: Food)")},
+                // {"jugar", (new List<(int, int)>(), "To play or have fun (English: Play)")},
+                // {"trabajar", (new List<(int, int)>(), "To do your job (English: Work)")}
+
                 // { "perro", (new List<(int, int)> { (0,0), (0,1), (0,2), (0,3), (0,4) }, "1. Animal that barks (English: Dog)" ) },
                 // { "gato", (new List<(int, int)> { (2,0), (2,1), (2,2), (2,3) }, "2. A feline pet (English: Cat)" ) },
                 // { "casa", (new List<(int, int)> { (4,0), (4,1), (4,2), (4,3) }, "3. A place where people live (English: House)" ) }
@@ -59,6 +70,7 @@ public class CrosswordForm : Form{
                 Width = 400,
                 Height = 400,
                 CellBorderStyle = TableLayoutPanelCellBorderStyle.Single
+                
             };
 
             for (int i = 0; i < 6; i++)
@@ -76,9 +88,10 @@ public class CrosswordForm : Form{
                         Dock = DockStyle.Fill,
                         TextAlign = HorizontalAlignment.Center,
                         MaxLength = 1,
-                        Font = new Font("Arial", 14),
+                        Font = new Font("Arial", 18, FontStyle.Bold),
                         BackColor = Color.LightGray, // Default color for unused cells
-                        Enabled = false
+                        Enabled = false,
+                        BorderStyle = BorderStyle.FixedSingle
                     };
                     box.GotFocus += OnBoxFocus;
                     grid.Controls.Add(box, c, r);
@@ -90,30 +103,45 @@ public class CrosswordForm : Form{
             {
                 foreach (var (row, col) in word.Value.positions)
                 {
-                    var box = (TextBox)grid.GetControlFromPosition(col, row);
-                    box.BackColor = Color.White;
-                    box.Enabled = true;
-                    box.Tag = word.Key;
-                    box.TextChanged += OnTextChanged;
-                    crosswordGrid[(row, col)] = (word.Key[word.Value.positions.IndexOf((row, col))], box);
+                    var box = (TextBox?)grid.GetControlFromPosition(col, row);
+                    if (box != null)
+                    {
+                        box.BackColor = Color.White;
+                        box.Enabled = true;
+                        box.Tag = word.Key;
+                        box.TextChanged += OnTextChanged;
+                        crosswordGrid[(row, col)] = (word.Key[word.Value.positions.IndexOf((row, col))], box);
+                    }
                 }
             }
 
             Controls.Add(grid);
         }
 
-         private void OnBoxFocus(object? sender, EventArgs e)
+    private void OnBoxFocus(object? sender, EventArgs e)
     {
-        TextBox focusedBox = sender as TextBox;
+        TextBox focusedBox = (TextBox)sender!;
         if (focusedBox != null && focusedBox.Tag is string word)
         {
             hintLabel.Text = words[word].hint;
+
+            focusedBox.BackColor = Color.LightYellow;
+            focusedBox.BorderStyle = BorderStyle.Fixed3D;
+        }
+    }
+
+    private void OnBoxLostFocus(object? sender, EventArgs e)
+    {
+        if (sender is TextBox box)
+        {
+            box.BackColor = Color.White;
+            box.BorderStyle = BorderStyle.FixedSingle;
         }
     }
 
     private void OnTextChanged(object? sender, EventArgs e)
     {
-        TextBox box = sender as TextBox;
+        TextBox box = (TextBox)sender!;
         if (box != null && box.Text.Length == 1)
         {
             var position = grid.GetPositionFromControl(box);
