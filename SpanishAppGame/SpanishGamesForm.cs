@@ -64,8 +64,10 @@ public class SpanishGamesForm : Form
 
     private void OnTypingGameClick(object sender, EventArgs e)
     {
-        MessageBox.Show("Typing Game (To be implemented)");
+        TypingGameForm typingGame = new TypingGameForm();
+        typingGame.Show();
     }
+
 
     private void OnScrambleGameClick(object sender, EventArgs e)
     {
