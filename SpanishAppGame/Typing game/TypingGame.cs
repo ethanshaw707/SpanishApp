@@ -10,6 +10,9 @@ public class TypingGameForm : Form
     private Button startButton;
     private TextBox textBox;
     private Label instructionLabel;
+    private int horseStartX = 10;  // Starting position (left side)
+    private int horseFinishX;      // Finish line position
+
     private PictureBox horsePictureBox;
     private Bitmap horseImage;
     private List<string> sentences;
@@ -44,13 +47,28 @@ public class TypingGameForm : Form
         // Load horse image correctly
         try
         {
-            string imagePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "pixel_horse.png");
-            horseImage = new Bitmap(imagePath); // Load image from project directory
+            string imagePath = System.IO.Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..", "..", "..", "Resources", "pixel_horse.png");
+            MessageBox.Show($"Looking for image at: {imagePath}");
+
+            if (!System.IO.File.Exists(imagePath))
+            {
+                MessageBox.Show("Image file not found at: " + imagePath);
+            }
+            else
+            {
+                Bitmap originalImage = new Bitmap(imagePath);
+                
+                // Resize the image to make it smaller
+                int newWidth = 50;  
+                int newHeight = 50; 
+
+                horseImage = new Bitmap(originalImage, new Size(newWidth, newHeight));
+            }
         }
         catch (Exception ex)
         {
             MessageBox.Show("Error loading horse image: " + ex.Message);
-            horseImage = new Bitmap(50, 50); // Fallback in case of error
+            horseImage = new Bitmap(50, 50);
         }
 
         stopwatch = new Stopwatch();
@@ -74,14 +92,28 @@ public class TypingGameForm : Form
         };
         textBox.KeyPress += new KeyPressEventHandler(OnKeyPress);
 
-        horsePictureBox = new PictureBox
+        // Set finish line position before adding it
+        horseFinishX = this.ClientSize.Width - 100; 
+
+        Label finishLine = new Label
         {
-            Dock = DockStyle.Top,
+            Width = 5,
             Height = 100,
-            BackColor = Color.White,
-            Image = horseImage,
-            SizeMode = PictureBoxSizeMode.CenterImage
+            BackColor = Color.Black,
+            Location = new Point(horseFinishX, 130)
         };
+        Controls.Add(finishLine);
+
+horsePictureBox = new PictureBox
+{
+    Width = 50,  // Fixed width
+    Height = 50, // Fixed height
+    BackColor = Color.Transparent,
+    Image = horseImage,
+    SizeMode = PictureBoxSizeMode.Zoom, // Ensures aspect ratio is maintained
+    Location = new Point(horseStartX, 150)
+};
+
 
         Controls.Add(horsePictureBox);
         Controls.Add(textBox);
@@ -104,7 +136,7 @@ public class TypingGameForm : Form
     {
         if (currentIndex == 0 && !stopwatch.IsRunning)
         {
-            stopwatch.Start(); // Start the stopwatch on the first key press
+            stopwatch.Start(); // Start stopwatch on first key press
         }
 
         if (currentIndex < currentParagraph.Length && e.KeyChar == currentParagraph[currentIndex])
@@ -112,20 +144,31 @@ public class TypingGameForm : Form
             currentIndex++;
             instructionLabel.Text = currentParagraph.Substring(currentIndex);
 
+            // Move horse forward based on progress
+            int progress = (int)((double)currentIndex / currentParagraph.Length * (horseFinishX - horseStartX));
+            horsePictureBox.Location = new Point(horseStartX + progress, horsePictureBox.Location.Y);
+
             // Check if paragraph is completed
             if (currentIndex == currentParagraph.Length)
             {
-                stopwatch.Stop(); // Stop the stopwatch
+                stopwatch.Stop();
                 double elapsedSeconds = stopwatch.Elapsed.TotalSeconds;
                 double wordsPerMinute = (currentParagraph.Split(' ').Length / elapsedSeconds) * 60;
                 MessageBox.Show($"Congratulations! You've completed the paragraph!\nYour typing speed is {wordsPerMinute:F2} WPM.");
-                DisplayNewParagraph();
-                textBox.Clear();
+                ResetGame();
             }
         }
         else
         {
             e.Handled = true; // Ignore incorrect key press
         }
+    }
+
+    private void ResetGame()
+    {
+        textBox.Clear();
+        currentIndex = 0;
+        horsePictureBox.Location = new Point(horseStartX, horsePictureBox.Location.Y); // Reset horse position
+        DisplayNewParagraph();
     }
 }
