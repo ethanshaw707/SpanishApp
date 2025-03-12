@@ -70,14 +70,26 @@ public partial class FlashcardBattleForm : Form
 
         // Set up the labels and controls
         this.player1ScoreLabel.Text = "Player 1: 0";
+        this.player1ScoreLabel.Font = new Font("Arial", 12, FontStyle.Bold);
+        this.player1ScoreLabel.ForeColor = Color.Blue;
+        this.player1ScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
+        this.player1ScoreLabel.Size = new Size(120, 30);
+        this.player1ScoreLabel.Location = new Point(20, 20);
         this.player1ScoreLabel.Location = new System.Drawing.Point(20, 20);
         this.Controls.Add(player1ScoreLabel);
 
         this.player2ScoreLabel.Text = "Player 2: 0";
+        this.player2ScoreLabel.Font = new Font("Arial", 12, FontStyle.Bold);
+        this.player2ScoreLabel.ForeColor = Color.Red;
+        this.player2ScoreLabel.TextAlign = ContentAlignment.MiddleCenter;
+        this.player2ScoreLabel.Size = new Size(120, 30);
         this.player2ScoreLabel.Location = new System.Drawing.Point(200, 20);
         this.Controls.Add(player2ScoreLabel);
 
         this.roundLabel.Text = "Round: 1";
+        this.roundLabel.Font = new Font("Arial", 14, FontStyle.Bold);
+        this.roundLabel.ForeColor = Color.DarkGreen;
+        this.roundLabel.TextAlign = ContentAlignment.MiddleCenter;
         this.roundLabel.Location = new System.Drawing.Point(150, 50);
         this.Controls.Add(roundLabel);
 
@@ -92,6 +104,9 @@ public partial class FlashcardBattleForm : Form
         this.Controls.Add(countdownLabel);
 
         this.playerLabel.Text = "Player 1's Turn";
+        this.playerLabel.Font = new Font("Arial", 12, FontStyle.Italic);
+        this.playerLabel.ForeColor = Color.DarkOrange;
+        this.playerLabel.TextAlign = ContentAlignment.MiddleCenter;
         this.playerLabel.Location = new System.Drawing.Point(150, 170); // Position it below the countdown
         this.Controls.Add(playerLabel);
 
@@ -115,7 +130,7 @@ public partial class FlashcardBattleForm : Form
         this.answerTextBox.KeyDown += new KeyEventHandler(answerTextBox_KeyDown);
 
         this.Text = "Flashcard Battle Game";
-        this.Size = new System.Drawing.Size(400, 300);
+        this.Size = new System.Drawing.Size(600, 400);
     }
 
     // Start the game
