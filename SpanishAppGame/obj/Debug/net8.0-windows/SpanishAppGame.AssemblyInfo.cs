@@ -13,7 +13,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SpanishAppGame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b542c2a9123189ac6c17f4f9a355db9c1fa4e381")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6510ad1f3aab6e18322a69108e6faadfc602fdd8")]
+>>>>>>> 41750a599089e76e9c5ed9a6cfbff265b53fff02
 [assembly: System.Reflection.AssemblyProductAttribute("SpanishAppGame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SpanishAppGame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

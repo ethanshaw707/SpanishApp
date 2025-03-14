@@ -18,75 +18,93 @@ namespace SpanishAppGame
     "escuela", "profesor", "estudiante", "computadora", "teclado", "raton", "pantalla"
 };
         public ScrambleWordForm()
-        {
-            BackColor = Color.WhiteSmoke;
-            FormBorderStyle = FormBorderStyle.FixedSingle;
-
-            Text = "🧩 Scramble Word Game";
-            Width = 400;
-            Height = 300;
-            StartPosition = FormStartPosition.CenterScreen;
-
-            scrambledLabel = new Label
 {
-    Text = "Scrambled word will appear here",
-    Dock = DockStyle.Top,
-    Font = new Font("Arial", 16, FontStyle.Bold),
-    ForeColor = Color.DarkBlue,
-    TextAlign = ContentAlignment.MiddleCenter,
-    Height = 60,
-    Padding = new Padding(10)
-};
+    Text = "🧩 Scramble Word Game";
+    Width = 500; // Wider window
+    Height = 400;
+    StartPosition = FormStartPosition.CenterScreen;
+    BackColor = Color.WhiteSmoke;
+    FormBorderStyle = FormBorderStyle.FixedSingle;
+    
+    // Set a custom icon (Make sure you have an "icon.ico" file)
+    Icon = new Icon("Resources/icon.ico");
 
-inputBox = new TextBox
-{
-    Dock = DockStyle.Top,
-    Font = new Font("Arial", 14),
-    TextAlign = HorizontalAlignment.Center,
-    BackColor = Color.LightYellow,
-    ForeColor = Color.DarkSlateGray,
-    BorderStyle = BorderStyle.FixedSingle,
-    Margin = new Padding(10)
-};
+    // Scrambled word label
+    scrambledLabel = new Label
+    {
+        Text = "Scrambled word will appear here",
+        Dock = DockStyle.Top,
+        Font = new Font("Arial", 18, FontStyle.Bold),
+        ForeColor = Color.DarkBlue,
+        TextAlign = ContentAlignment.MiddleCenter,
+        Height = 70,
+        Padding = new Padding(10)
+    };
 
-submitButton = new Button
-{
-    Text = "Submit",
-    Dock = DockStyle.Top,
-    Height = 40,
-    BackColor = Color.LightGreen,
-    FlatStyle = FlatStyle.Flat,
-    Font = new Font("Arial", 12, FontStyle.Bold)
-};
+    // Input box
+    inputBox = new TextBox
+    {
+        Dock = DockStyle.Top,
+        Font = new Font("Arial", 16),
+        TextAlign = HorizontalAlignment.Center,
+        BackColor = Color.LightYellow,
+        ForeColor = Color.Black,
+        BorderStyle = BorderStyle.FixedSingle,
+        Height = 40,
+        Margin = new Padding(10)
+    };
 
-newWordButton = new Button
-{
-    Text = "New Word",
-    Dock = DockStyle.Top,
-    Height = 40,
-    BackColor = Color.CornflowerBlue,
-    FlatStyle = FlatStyle.Flat,
-    Font = new Font("Arial", 12, FontStyle.Bold),
-    ForeColor = Color.White
-};
+    // Submit Button
+    submitButton = new Button
+    {
+        Text = "✔ Submit",
+        Dock = DockStyle.Top,
+        Width = 140,
+        Height = 50,
+        BackColor = Color.SeaGreen,
+        ForeColor = Color.White,
+        FlatStyle = FlatStyle.Flat,
+        Font = new Font("Arial", 14, FontStyle.Bold)
+    };
+    submitButton.FlatAppearance.BorderSize = 0;
+    submitButton.Click += OnSubmit;
 
-            submitButton.Click += OnSubmit;
+    // New Word Button
+    newWordButton = new Button
+    {
+        Text = "🔄 New Word",
+        Dock = DockStyle.Top,
+        Width = 140,
+        Height = 50,
+        BackColor = Color.CornflowerBlue,
+        ForeColor = Color.White,
+        FlatStyle = FlatStyle.Flat,
+        Font = new Font("Arial", 14, FontStyle.Bold)
+    };
+    newWordButton.FlatAppearance.BorderSize = 0;
+    newWordButton.Click += OnNewWord;
 
-            newWordButton = new Button
-            {
-                Text = "New Word",
-                Dock = DockStyle.Top,
-                Height = 40
-            };
-            newWordButton.Click += OnNewWord;
+    // Layout Panel for better spacing
+    FlowLayoutPanel buttonPanel = new FlowLayoutPanel
+    {
+        Dock = DockStyle.Top,
+        FlowDirection = FlowDirection.LeftToRight,
+        Height = 60,
+        Padding = new Padding(10),
+        AutoSize = true
+    };
 
-            Controls.Add(newWordButton);
-            Controls.Add(submitButton);
-            Controls.Add(inputBox);
-            Controls.Add(scrambledLabel);
+    buttonPanel.Controls.Add(submitButton);
+    buttonPanel.Controls.Add(newWordButton);
 
-            GenerateNewWord();
-        }
+    Controls.Add(buttonPanel);
+    Controls.Add(inputBox);
+    Controls.Add(scrambledLabel);
+
+    GenerateNewWord();
+}
+
+        
 
         private void GenerateNewWord()
         {

@@ -46,6 +46,12 @@ C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programmin
 C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishAppGame.csproj.AssemblyReference.cache
 C:\Users\Joshua\OneDrive\Escritorio\BYU-I\Winter 2025\CSE 310 Applied Programming\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishA.91247401.Up2Date
+<<<<<<< HEAD
 C:\Users\ethan\Downloads\AppliedProgrammingSprint1\SpanishApp\SpanishApp\SpanishAppGame\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\ethan\Downloads\AppliedProgrammingSprint1\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishAppGame.csproj.AssemblyReference.cache
 C:\Users\ethan\Downloads\AppliedProgrammingSprint1\SpanishApp\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishA.91247401.Up2Date
+=======
+C:\Users\Jonat\SpanishApp\SpanishAppGame\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishAppGame.csproj.AssemblyReference.cache
+C:\Users\Jonat\SpanishApp\SpanishAppGame\obj\Debug\net8.0-windows\SpanishA.91247401.Up2Date
+>>>>>>> 41750a599089e76e9c5ed9a6cfbff265b53fff02
