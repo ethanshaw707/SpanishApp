@@ -42,11 +42,27 @@ public class TypingGameForm : Form
 
         sentences = new List<string>
         {
-            "El rapido zorro marron salta sobre el perro perezoso.",
-            "Aprender a programar es divertido y gratificante.",
-            "Un viaje de mil millas comienza con un solo paso.",
-            "La practica hace al maestro, asi que sigue escribiendo.",
-            "Depurar es como ser un detective en una pelicula de crimen."
+
+    "El sol brilla en el cielo azul y despejado.",  
+    "Cada dia es una nueva oportunidad para aprender algo nuevo.",  
+    "Los gatos duermen muchas horas durante el dia.",  
+    "La lectura es una puerta a mundos desconocidos.",  
+    "El cafe caliente es perfecto para las mañanas frias.",  
+    "Las montañas son un reto para los amantes del senderismo.",  
+    "Un buen amigo siempre esta ahi cuando lo necesitas.",  
+    "La musica puede cambiar el estado de animo en segundos.",  
+    "El mar es inmenso y lleno de misterios.",  
+    "Nada es imposible si trabajas duro y persistes.",  
+    "El tiempo vuela cuando te estas divirtiendo.",  
+    "El arte es una expresion unica de la creatividad humana.",  
+    "Cada error es una leccion disfrazada de fracaso.",  
+    "Las estrellas iluminan la noche con su brillo lejano.",  
+    "La paciencia es clave para alcanzar grandes logros.",  
+    "Cocinar es una combinacion de ciencia y arte.",  
+    "El amor y la amistad hacen la vida mas hermosa.",  
+    "Viajar es la mejor manera de conocer nuevas culturas.",  
+    "El deporte ayuda a mantener el cuerpo y la mente en forma.",  
+    "Un pequeño gesto puede hacer una gran diferencia."
         };
 
         try
