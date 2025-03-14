@@ -11,50 +11,67 @@ public class SpanishGamesForm : Form
     private Button flashcardBattleButton;
     private Button exitButton;
     private Label titleLabel;
+    private Panel buttonPanel;
 
     public SpanishGamesForm()
     {
         Text = "Spanish Games";
         Width = 400;
-        Height = 500;
+        Height = 600;
 
-        titleLabel = new Label();
-        titleLabel.Text = "Welcome to the Spanish Games";
-        titleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-        titleLabel.Dock = DockStyle.Top;
+        this.BackgroundImage = Image.FromFile("Resources/spanish-speaking-countries.jpg");
+        this.BackgroundImageLayout = ImageLayout.Stretch;
 
-        crosswordButton = new Button();
-        crosswordButton.Text = "1. Spanish Crossword";
-        crosswordButton.Dock = DockStyle.Top;
-        crosswordButton.Click += OnCrosswordClick;
+         // Create a panel to center buttons
+            buttonPanel = new Panel();
+            buttonPanel.Size = new Size(300, 350); // Adjusted height for better layout
+            buttonPanel.BackColor = Color.FromArgb(100, 255, 255, 255); // Semi-transparent background
+            buttonPanel.Location = new Point((ClientSize.Width - buttonPanel.Width) / 2, (ClientSize.Height - buttonPanel.Height) / 2);
+            buttonPanel.Anchor = AnchorStyles.None;
 
-        typingGameButton = new Button();
-        typingGameButton.Text = "2. Spanish Typing Game";
-        typingGameButton.Dock = DockStyle.Top;
-        typingGameButton.Click += OnTypingGameClick;
+            // Title Label
+            titleLabel = new Label();
+            titleLabel.Text = "Welcome to the Spanish Games";
+            titleLabel.Font = new Font("Comic Sans MS", 14, FontStyle.Bold);
+            titleLabel.ForeColor = Color.Black;
+            titleLabel.TextAlign = ContentAlignment.MiddleCenter;
+            titleLabel.Size = new Size(280, 50);
+            titleLabel.Location = new Point(10, 10);
 
-        scrambleGameButton = new Button();
-        scrambleGameButton.Text = "3. Spanish Scramble Game";
-        scrambleGameButton.Dock = DockStyle.Top;
-        scrambleGameButton.Click += OnScrambleGameClick;
+            // Create buttons
+            crosswordButton = CreateStyledButton("1. Spanish Crossword", 70, OnCrosswordClick);
+            typingGameButton = CreateStyledButton("2. Spanish Typing Game", 130, OnTypingGameClick);
+            scrambleGameButton = CreateStyledButton("3. Spanish Scramble Game", 190, OnScrambleGameClick);
+            flashcardBattleButton = CreateStyledButton("4. Flashcard Battle", 250, OnFlashcardBattleClick);
+            exitButton = CreateStyledButton("5. Exit", 310, OnExitClick);
+            exitButton.ForeColor = Color.White;
+            exitButton.BackColor = Color.Red;
 
-        flashcardBattleButton = new Button();  // Button for Flashcard Battle
-        flashcardBattleButton.Text = "4. Flashcard Battle";
-        flashcardBattleButton.Dock = DockStyle.Top;
-        flashcardBattleButton.Click += OnFlashcardBattleClick;
+            // Add controls to panel
+            buttonPanel.Controls.Add(titleLabel);
+            buttonPanel.Controls.Add(crosswordButton);
+            buttonPanel.Controls.Add(typingGameButton);
+            buttonPanel.Controls.Add(scrambleGameButton);
+            buttonPanel.Controls.Add(flashcardBattleButton);
+            buttonPanel.Controls.Add(exitButton);
 
-        exitButton = new Button();
-        exitButton.Text = "5. Exit";
-        exitButton.Dock = DockStyle.Top;
-        exitButton.Click += OnExitClick;
+            // Add panel to the form
+            Controls.Add(buttonPanel);
+        }
 
-        Controls.Add(exitButton);
-        Controls.Add(flashcardBattleButton);
-        Controls.Add(scrambleGameButton);
-        Controls.Add(typingGameButton);  
-        Controls.Add(crosswordButton);
-        Controls.Add(titleLabel);
-    }
+        private Button CreateStyledButton(string text, int yOffset, EventHandler clickEvent)
+        {
+            Button button = new Button();
+            button.Text = text;
+            button.Font = new Font("Arial", 12, FontStyle.Bold);
+            button.Size = new Size(250, 50);
+            button.Location = new Point(25, yOffset); // Centering inside panel
+            button.BackColor = Color.White; // Semi-transparent black
+            button.ForeColor = Color.Black;
+            button.FlatStyle = FlatStyle.Flat;
+            button.Click += clickEvent;
+            return button;
+        }
 
     private void OnCrosswordClick(object sender, EventArgs e)
     {

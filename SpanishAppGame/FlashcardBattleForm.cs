@@ -126,11 +126,19 @@ public partial class FlashcardBattleForm : Form
         this.winnerLabel.Location = new System.Drawing.Point(100, 250);
         this.Controls.Add(winnerLabel);
 
+        this.wordLabel.AutoSize = true;
+        this.wordLabel.Location = new System.Drawing.Point((this.ClientSize.Width - wordLabel.Width) / 2, 100);
+        this.wordLabel.Anchor = AnchorStyles.Top;
+        this.wordLabel.TextAlign = ContentAlignment.MiddleCenter; 
+
+
+        this.StartPosition = FormStartPosition.CenterScreen;
+
         // Handle Enter key press for submitting answer
         this.answerTextBox.KeyDown += new KeyEventHandler(answerTextBox_KeyDown);
 
         this.Text = "Flashcard Battle Game";
-        this.Size = new System.Drawing.Size(600, 400);
+        this.Size = new System.Drawing.Size(500, 400);
     }
 
     // Start the game
