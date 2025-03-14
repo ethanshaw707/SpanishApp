@@ -1,7 +1,6 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
     "C:\\Users\\ethan\\Downloads\\AppliedProgrammingSprint1\\SpanishApp\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj": {}
   },
   "projects": {
@@ -16,22 +15,6 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ethan\\AppData\\Roaming\\NuGet\\NuGet.Config"
-=======
-    "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
-        "projectName": "SpanishAppGame",
-        "projectPath": "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\SpanishAppGame.csproj",
-        "packagesPath": "C:\\Users\\Jonat\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jonat\\SpanishApp\\SpanishAppGame\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Jonat\\AppData\\Roaming\\NuGet\\NuGet.Config"
->>>>>>> d44a52cce5f47f7763ea50a5edd2e681fca6ab54
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
@@ -55,11 +38,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-<<<<<<< HEAD
         "SdkAnalysisLevel": "9.0.200"
-=======
-        "SdkAnalysisLevel": "9.0.100"
->>>>>>> d44a52cce5f47f7763ea50a5edd2e681fca6ab54
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -88,7 +67,6 @@
           "downloadDependencies": [
             {
               "name": "Microsoft.AspNetCore.App.Ref",
-<<<<<<< HEAD
               "version": "[8.0.13, 8.0.13]"
             },
             {
@@ -102,21 +80,6 @@
             {
               "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[8.0.13, 8.0.13]"
-=======
-              "version": "[8.0.14, 8.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Host.win-x64",
-              "version": "[8.0.14, 8.0.14]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.14, 8.0.14]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[8.0.14, 8.0.14]"
->>>>>>> d44a52cce5f47f7763ea50a5edd2e681fca6ab54
             }
           ],
           "frameworkReferences": {
@@ -127,11 +90,7 @@
               "privateAssets": "none"
             }
           },
-<<<<<<< HEAD
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
-=======
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.104/PortableRuntimeIdentifierGraph.json"
->>>>>>> d44a52cce5f47f7763ea50a5edd2e681fca6ab54
         }
       }
     }
